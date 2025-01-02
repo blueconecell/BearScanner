@@ -4,8 +4,14 @@ import bearscannerbackend.base.BaseEntity;
 import bearscannerbackend.item.Item;
 import bearscannerbackend.village.Village;
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
 @Entity
+@Getter
+@Setter
+@RequiredArgsConstructor
 public class Stock extends BaseEntity {
 
     @Id
@@ -20,36 +26,4 @@ public class Stock extends BaseEntity {
     private Item item;
 
 
-    public Stock( Village village, Item item) {
-        this.village = village;
-        this.item = item;
-    }
-
-    public Stock() {
-
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public Village getVillage() {
-        return village;
-    }
-
-    public void setVillage(Village village) {
-        this.village = village;
-    }
-
-    public Item getItem() {
-        return item;
-    }
-
-    public void setItem(Item item) {
-        this.item = item;
-    }
 }

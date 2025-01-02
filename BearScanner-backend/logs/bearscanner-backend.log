@@ -1,0 +1,171 @@
+2025-01-02T21:35:19.742+09:00  INFO 15724 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : Starting BearScannerBackendApplication using Java 21.0.4 with PID 15724 (C:\Users\User\Documents\GitHub\Project\BearScanner\BearScanner-backend\BearScanner-backend\out\production\classes started by User in C:\Users\User\Documents\GitHub\Project\BearScanner\BearScanner-backend\BearScanner-backend)
+2025-01-02T21:35:19.744+09:00  INFO 15724 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T21:35:20.349+09:00  INFO 15724 --- [BearScanner-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T21:35:20.372+09:00  INFO 15724 --- [BearScanner-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 14 ms. Found 0 JPA repository interfaces.
+2025-01-02T21:35:20.888+09:00  INFO 15724 --- [BearScanner-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T21:35:20.901+09:00  INFO 15724 --- [BearScanner-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T21:35:20.902+09:00  INFO 15724 --- [BearScanner-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-02T21:35:20.949+09:00  INFO 15724 --- [BearScanner-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T21:35:20.950+09:00  INFO 15724 --- [BearScanner-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1162 ms
+2025-01-02T21:35:21.115+09:00  INFO 15724 --- [BearScanner-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T21:35:21.170+09:00  INFO 15724 --- [BearScanner-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-02T21:35:21.203+09:00  INFO 15724 --- [BearScanner-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T21:35:21.486+09:00  INFO 15724 --- [BearScanner-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T21:35:21.515+09:00  INFO 15724 --- [BearScanner-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T21:35:21.801+09:00  INFO 15724 --- [BearScanner-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65db548
+2025-01-02T21:35:21.803+09:00  INFO 15724 --- [BearScanner-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T21:35:21.847+09:00  WARN 15724 --- [BearScanner-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T21:35:21.863+09:00  INFO 15724 --- [BearScanner-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-02T21:35:22.776+09:00  INFO 15724 --- [BearScanner-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T21:35:22.872+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table boss (boss_id bigint not null, crafting_jobs varbinary(255), life_jobs varbinary(255), name varchar(255), village_id bigint, primary key (boss_id)) engine=InnoDB
+2025-01-02T21:35:22.913+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table boss_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:35:22.924+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into boss_seq values ( 1 )
+2025-01-02T21:35:22.932+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table item (item_id bigint not null, created_by varchar(255), created_date datetime(6), last_modified_by varchar(255), last_modified_date datetime(6), name varchar(255), price bigint, quantity integer not null, primary key (item_id)) engine=InnoDB
+2025-01-02T21:35:22.942+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table item_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:35:22.951+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into item_seq values ( 1 )
+2025-01-02T21:35:22.954+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table stock (stock_id bigint not null, created_by varchar(255), created_date datetime(6), last_modified_by varchar(255), last_modified_date datetime(6), item_id bigint, village_id bigint, primary key (stock_id)) engine=InnoDB
+2025-01-02T21:35:22.964+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table stock_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:35:22.972+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into stock_seq values ( 1 )
+2025-01-02T21:35:22.975+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table village (village_id bigint not null, created_by varchar(255), created_date datetime(6), last_modified_by varchar(255), last_modified_date datetime(6), name varchar(255), primary key (village_id)) engine=InnoDB
+2025-01-02T21:35:23.010+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table village_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:35:23.021+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into village_seq values ( 1 )
+2025-01-02T21:35:23.024+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table boss add constraint FK88155a04m3267q13tma8dtl8n foreign key (village_id) references village (village_id)
+2025-01-02T21:35:23.068+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table stock add constraint FKf3gqo6e3aged60kygtbmtsd8s foreign key (item_id) references item (item_id)
+2025-01-02T21:35:23.107+09:00 DEBUG 15724 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table stock add constraint FKk2hhjpiijdu040pl4x10edvr0 foreign key (village_id) references village (village_id)
+2025-01-02T21:35:23.146+09:00  INFO 15724 --- [BearScanner-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T21:35:23.187+09:00  WARN 15724 --- [BearScanner-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T21:35:23.543+09:00  INFO 15724 --- [BearScanner-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T21:35:23.551+09:00  INFO 15724 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : Started BearScannerBackendApplication in 4.294 seconds (process running for 4.952)
+2025-01-02T21:35:23.608+09:00  INFO 15724 --- [BearScanner-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: bearScanner]
+2025-01-02T21:35:23.611+09:00  INFO 15724 --- [BearScanner-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T21:35:23.630+09:00  WARN 15724 --- [BearScanner-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001002: Using built-in connection pool (not intended for production use)
+2025-01-02T21:35:23.644+09:00  WARN 15724 --- [BearScanner-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T21:35:23.645+09:00  INFO 15724 --- [BearScanner-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [jdbc:mysql://localhost:3306/bearscanner]
+	Database driver: com.mysql.cj.jdbc.Driver
+	Database version: 8.0.32
+	Autocommit mode: false
+	Isolation level: undefined/unknown
+	Minimum pool size: 1
+	Maximum pool size: 20
+2025-01-02T21:35:23.665+09:00  INFO 15724 --- [BearScanner-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T21:44:56.784+09:00  INFO 15724 --- [BearScanner-backend] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T21:44:56.789+09:00  INFO 15724 --- [BearScanner-backend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T21:44:56.794+09:00  INFO 15724 --- [BearScanner-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T21:44:56.795+09:00  INFO 15724 --- [BearScanner-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T21:44:56.801+09:00  INFO 15724 --- [BearScanner-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T21:45:00.858+09:00  INFO 7040 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : Starting BearScannerBackendApplication using Java 21.0.4 with PID 7040 (C:\Users\User\Documents\GitHub\Project\BearScanner\BearScanner-backend\BearScanner-backend\out\production\classes started by User in C:\Users\User\Documents\GitHub\Project\BearScanner\BearScanner-backend\BearScanner-backend)
+2025-01-02T21:45:00.860+09:00  INFO 7040 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T21:45:01.349+09:00  INFO 7040 --- [BearScanner-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T21:45:01.368+09:00  INFO 7040 --- [BearScanner-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2025-01-02T21:45:01.761+09:00  INFO 7040 --- [BearScanner-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T21:45:01.774+09:00  INFO 7040 --- [BearScanner-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T21:45:01.774+09:00  INFO 7040 --- [BearScanner-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-02T21:45:01.820+09:00  INFO 7040 --- [BearScanner-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T21:45:01.820+09:00  INFO 7040 --- [BearScanner-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 928 ms
+2025-01-02T21:45:01.987+09:00  INFO 7040 --- [BearScanner-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T21:45:02.049+09:00  INFO 7040 --- [BearScanner-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-02T21:45:02.082+09:00  INFO 7040 --- [BearScanner-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T21:45:02.372+09:00  INFO 7040 --- [BearScanner-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T21:45:02.403+09:00  INFO 7040 --- [BearScanner-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T21:45:02.730+09:00  INFO 7040 --- [BearScanner-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@146f3d22
+2025-01-02T21:45:02.732+09:00  INFO 7040 --- [BearScanner-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T21:45:02.774+09:00  WARN 7040 --- [BearScanner-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T21:45:02.791+09:00  INFO 7040 --- [BearScanner-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-02T21:45:03.682+09:00  INFO 7040 --- [BearScanner-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T21:45:03.762+09:00  INFO 7040 --- [BearScanner-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T21:45:03.849+09:00  WARN 7040 --- [BearScanner-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T21:45:04.174+09:00  INFO 7040 --- [BearScanner-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T21:45:04.181+09:00  INFO 7040 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : Started BearScannerBackendApplication in 3.706 seconds (process running for 4.281)
+2025-01-02T21:45:12.765+09:00  INFO 7040 --- [BearScanner-backend] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-02T21:45:12.770+09:00  INFO 7040 --- [BearScanner-backend] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-02T21:45:12.774+09:00  INFO 7040 --- [BearScanner-backend] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T21:45:12.775+09:00  INFO 7040 --- [BearScanner-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-02T21:45:12.781+09:00  INFO 7040 --- [BearScanner-backend] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-02T21:45:41.632+09:00  INFO 8512 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : Starting BearScannerBackendApplication using Java 21.0.4 with PID 8512 (C:\Users\User\Documents\GitHub\Project\BearScanner\BearScanner-backend\BearScanner-backend\out\production\classes started by User in C:\Users\User\Documents\GitHub\Project\BearScanner\BearScanner-backend\BearScanner-backend)
+2025-01-02T21:45:41.634+09:00  INFO 8512 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : No active profile set, falling back to 1 default profile: "default"
+2025-01-02T21:45:42.117+09:00  INFO 8512 --- [BearScanner-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-02T21:45:42.136+09:00  INFO 8512 --- [BearScanner-backend] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 12 ms. Found 0 JPA repository interfaces.
+2025-01-02T21:45:42.538+09:00  INFO 8512 --- [BearScanner-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-02T21:45:42.552+09:00  INFO 8512 --- [BearScanner-backend] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-02T21:45:42.552+09:00  INFO 8512 --- [BearScanner-backend] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.34]
+2025-01-02T21:45:42.597+09:00  INFO 8512 --- [BearScanner-backend] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-02T21:45:42.598+09:00  INFO 8512 --- [BearScanner-backend] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 932 ms
+2025-01-02T21:45:42.740+09:00  INFO 8512 --- [BearScanner-backend] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-02T21:45:42.791+09:00  INFO 8512 --- [BearScanner-backend] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.4.Final
+2025-01-02T21:45:42.820+09:00  INFO 8512 --- [BearScanner-backend] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-02T21:45:43.085+09:00  INFO 8512 --- [BearScanner-backend] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-02T21:45:43.113+09:00  INFO 8512 --- [BearScanner-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-02T21:45:43.381+09:00  INFO 8512 --- [BearScanner-backend] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@143413cd
+2025-01-02T21:45:43.383+09:00  INFO 8512 --- [BearScanner-backend] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-02T21:45:43.424+09:00  WARN 8512 --- [BearScanner-backend] [main] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2025-01-02T21:45:43.439+09:00  INFO 8512 --- [BearScanner-backend] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.32
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-02T21:45:44.254+09:00  INFO 8512 --- [BearScanner-backend] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-02T21:45:44.269+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table boss drop foreign key FK88155a04m3267q13tma8dtl8n
+2025-01-02T21:45:44.280+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table stock drop foreign key FKf3gqo6e3aged60kygtbmtsd8s
+2025-01-02T21:45:44.287+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table stock drop foreign key FKk2hhjpiijdu040pl4x10edvr0
+2025-01-02T21:45:44.294+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists boss
+2025-01-02T21:45:44.308+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists boss_seq
+2025-01-02T21:45:44.320+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists item
+2025-01-02T21:45:44.332+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists item_seq
+2025-01-02T21:45:44.346+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists stock
+2025-01-02T21:45:44.358+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists stock_seq
+2025-01-02T21:45:44.369+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists village
+2025-01-02T21:45:44.382+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : drop table if exists village_seq
+2025-01-02T21:45:44.398+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table boss (boss_id bigint not null, village_id bigint, name varchar(255), crafting_jobs varbinary(255), life_jobs varbinary(255), primary key (boss_id)) engine=InnoDB
+2025-01-02T21:45:44.409+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table boss_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:45:44.417+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into boss_seq values ( 1 )
+2025-01-02T21:45:44.419+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table item (quantity integer not null, created_date datetime(6), item_id bigint not null, last_modified_date datetime(6), price bigint, created_by varchar(255), last_modified_by varchar(255), name varchar(255), primary key (item_id)) engine=InnoDB
+2025-01-02T21:45:44.428+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table item_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:45:44.436+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into item_seq values ( 1 )
+2025-01-02T21:45:44.439+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table stock (created_date datetime(6), item_id bigint, last_modified_date datetime(6), stock_id bigint not null, village_id bigint, created_by varchar(255), last_modified_by varchar(255), primary key (stock_id)) engine=InnoDB
+2025-01-02T21:45:44.447+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table stock_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:45:44.455+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into stock_seq values ( 1 )
+2025-01-02T21:45:44.458+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table village (created_date datetime(6), last_modified_date datetime(6), village_id bigint not null, created_by varchar(255), last_modified_by varchar(255), name varchar(255), primary key (village_id)) engine=InnoDB
+2025-01-02T21:45:44.467+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : create table village_seq (next_val bigint) engine=InnoDB
+2025-01-02T21:45:44.477+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : insert into village_seq values ( 1 )
+2025-01-02T21:45:44.481+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table boss add constraint FK88155a04m3267q13tma8dtl8n foreign key (village_id) references village (village_id)
+2025-01-02T21:45:44.517+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table stock add constraint FKf3gqo6e3aged60kygtbmtsd8s foreign key (item_id) references item (item_id)
+2025-01-02T21:45:44.559+09:00 DEBUG 8512 --- [BearScanner-backend] [main] org.hibernate.SQL                        : alter table stock add constraint FKk2hhjpiijdu040pl4x10edvr0 foreign key (village_id) references village (village_id)
+2025-01-02T21:45:44.600+09:00  INFO 8512 --- [BearScanner-backend] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-02T21:45:44.680+09:00  WARN 8512 --- [BearScanner-backend] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-02T21:45:44.997+09:00  INFO 8512 --- [BearScanner-backend] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-02T21:45:45.003+09:00  INFO 8512 --- [BearScanner-backend] [main] b.BearScannerBackendApplication          : Started BearScannerBackendApplication in 3.736 seconds (process running for 4.302)
+2025-01-02T21:49:21.016+09:00  INFO 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-02T21:49:21.017+09:00  INFO 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-02T21:49:21.018+09:00  INFO 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-02T21:49:21.088+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from boss_seq for update
+2025-01-02T21:49:21.097+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] org.hibernate.SQL                        : update boss_seq set next_val= ? where next_val=?
+2025-01-02T21:49:21.111+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] org.hibernate.SQL                        : select next_val as id_val from village_seq for update
+2025-01-02T21:49:21.112+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] org.hibernate.SQL                        : update village_seq set next_val= ? where next_val=?
+2025-01-02T21:49:21.132+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into boss (crafting_jobs,life_jobs,name,village_id,boss_id) values (?,?,?,?,?)
+2025-01-02T21:49:21.140+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] org.hibernate.SQL                        : insert into village (created_by,created_date,last_modified_by,last_modified_date,name,village_id) values (?,?,?,?,?,?)
+2025-01-02T21:49:21.145+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-1] org.hibernate.SQL                        : update boss set crafting_jobs=?,life_jobs=?,name=?,village_id=? where boss_id=?
+2025-01-02T21:50:54.374+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from boss_seq for update
+2025-01-02T21:50:54.375+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-4] org.hibernate.SQL                        : update boss_seq set next_val= ? where next_val=?
+2025-01-02T21:50:54.377+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-4] org.hibernate.SQL                        : select next_val as id_val from village_seq for update
+2025-01-02T21:50:54.378+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-4] org.hibernate.SQL                        : update village_seq set next_val= ? where next_val=?
+2025-01-02T21:50:54.380+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into boss (crafting_jobs,life_jobs,name,village_id,boss_id) values (?,?,?,?,?)
+2025-01-02T21:50:54.381+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-4] org.hibernate.SQL                        : insert into village (created_by,created_date,last_modified_by,last_modified_date,name,village_id) values (?,?,?,?,?,?)
+2025-01-02T21:50:54.383+09:00 DEBUG 8512 --- [BearScanner-backend] [http-nio-8080-exec-4] org.hibernate.SQL                        : update boss set crafting_jobs=?,life_jobs=?,name=?,village_id=? where boss_id=?
